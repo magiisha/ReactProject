@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './logo.svg'
+import Nav from './Nav';
+import Counter from './Counter';
+import ToDo from './ToDo';
 
 function App() {
+  function add(){
+    console.log("React");
+  }
+  function sub(a,b){
+    console.log(a-b);  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} alt="logo" />
+      <h1>heading</h1>
+      <button onClick={add}>Click Here</button>
+      <button onClick={()=>sub(237,368)}>Subtraction</button>
+      
+      <Nav />
+      <Counter />
+      <ToDo />
     </div>
   );
 }
